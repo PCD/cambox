@@ -32,8 +32,6 @@ function cambox_chat_menu() {
  * Provides a Chat Page.
  */
 function cambox_chat_menu_chat($node) {
-  drupal_add_css(drupal_get_path('module', 'cambox_chat') . '/css/cambox_chat.css');
-  drupal_add_js(drupal_get_path('module', 'cambox_chat') . '/js/cambox_chat.js');
   $raw_chat = cambox_chat_block_raw($node);
   return $raw_chat;
 }
@@ -69,7 +67,7 @@ function cambox_chat_menu_post_comment($node) {
     exit;
   } else {
     drupal_set_message(t('Your message has been posted.'));
-    drupal_goto('node/' . $node->nid . '/chat');
+    drupal_goto('node/' . $node->nid);
   }
 }
 
@@ -110,6 +108,7 @@ function cambox_chat_menu_pull_comment($node, $last_cid) {
   
   // We have comments, lets style them.
   $response['comments'] = cambox_chat_theme_comments_for_ajax($comments);
+  $response['count'] = count($comments);
   print drupal_json_output($response);
   exit;
 }

@@ -8,5 +8,13 @@ function cambox_chat_permission() {
       'title' => 'Access Chat', 
       'description' => 'Access Chat', 
     ), 
+    'Approve Chat Messages' => array(
+      'title' => 'Approve Chat Messages', 
+      'description' => 'Approve Chat Messages', 
+    ), 
+    'Save Chat Messages' => array(
+      'title' => 'Save Chat Messages', 
+      'description' => 'Save Chat Messages', 
+    ), 
   );
 }

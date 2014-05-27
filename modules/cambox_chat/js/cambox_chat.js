@@ -30,9 +30,12 @@ function commentPullAjax() {
     
     // Do Ajax Call
     $.post(baseUrl, function(data){
-      console.dir(data);
-      $('#comments-raw .comments .comment:last').removeClass('last');
-      $('#comments-raw .comments').append(data.comments);
+      if ( data.count > 0 ) {
+        $('#comments-raw .comments .comment:last').removeClass('last');
+        $('#comments-raw .comments').append(data.comments);
+      }
+      pullActive = 0;
+      commentPullAjax();
     }, 'json');
   }
 }

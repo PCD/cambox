@@ -27,8 +27,11 @@ function cambox_chat_block_view($delta = '') {
   switch($delta) {
     case 'chat_saved':
     case 'chat_approved':
+      break;
     case 'chat_raw':
-      $block = cambox_chat_block_raw($node);
+      if ( user_access('Access Chat') ) {
+        $block['content'] = cambox_chat_block_raw($node);
+      }
       break;
   }
   return $block;
@@ -38,6 +41,8 @@ function cambox_chat_block_view($delta = '') {
  * Returns a chatbox that has a Raw Conversation ready to be approved.
  */
 function cambox_chat_block_raw($node) {
+  drupal_add_css(drupal_get_path('module', 'cambox_chat') . '/css/cambox_chat.css');
+  drupal_add_js(drupal_get_path('module', 'cambox_chat') . '/js/cambox_chat.js');
   $comments = cambox_chat_data_get_comments($node->nid, 20);
   return cambox_chat_theme_comments($comments, 'raw');
 }
