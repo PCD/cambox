@@ -1,0 +1,4 @@
+name = CamBox Chat
+description = "Provides a Chat for Cambox Service"
+package = PCD
+core = 7.x
