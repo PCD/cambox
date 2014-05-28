@@ -3,5 +3,5 @@
 /**
  * @file
  * Template overrides as well as (pre-)process and alter hooks for the
- * CamBox Theme theme.
+ * Cambox Theme theme.
  */

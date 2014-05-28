@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Theme settings file for the CamBox Theme theme.
+ * Theme settings file for the Cambox Theme theme.
  */
 
 require_once dirname(__FILE__) . '/template.php';
