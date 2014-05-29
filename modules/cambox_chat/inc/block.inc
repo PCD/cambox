@@ -26,8 +26,9 @@ function cambox_chat_block_view($delta = '') {
   
   switch($delta) {
     case 'chat_saved':
-    case 'chat_approved':
       break;
+    
+    case 'chat_approved':
     case 'chat_raw':
       if ( user_access('Access Chat') ) {
         $block['content'] = cambox_chat_block_raw($node);

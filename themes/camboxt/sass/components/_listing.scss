@@ -1,0 +1,26 @@
+.listing-content{
+  .view-content{
+    margin-right: -105px;
+  }
+  .view-content:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .views-row{
+    cursor: pointer;
+    float: left;
+    width: 250px;
+    margin-right: 105px;
+    .label-above{
+      font-weight: bold;
+      color: #61686E;
+      font-size: 0.95em;
+    }
+    h2{
+      color: #0099CC;
+      margin: 0;
+      font-size: 1.3em;
+    }
+  }
+}

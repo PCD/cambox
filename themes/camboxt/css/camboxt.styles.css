@@ -1,5 +1,70 @@
+/* No files to import found in abstractions/**\/* */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/base\/_media\.scss}line{font-family:\000031}}
 img, media {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
-/* No files to import found in partials/components/**\/* */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_body\.scss}line{font-family:\000031}}
+body {
+  width: 960px;
+  margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_header\.scss}line{font-family:\000031}}
+.l-region--header {
+  margin-right: 105px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_header\.scss}line{font-family:\000034}}
+.l-branding {
+  width: 105px;
+  height: 72px;
+  float: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_header\.scss}line{font-family:\000039}}
+.front .l-branding {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_listing\.scss}line{font-family:\000032}}
+.listing-content .view-content {
+  margin-right: -105px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_listing\.scss}line{font-family:\000035}}
+.listing-content .view-content:after {
+  content: "";
+  display: table;
+  clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_listing\.scss}line{font-family:\0000310}}
+.listing-content .views-row {
+  cursor: pointer;
+  float: left;
+  width: 250px;
+  margin-right: 105px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_listing\.scss}line{font-family:\0000315}}
+  .listing-content .views-row .label-above {
+    font-weight: bold;
+    color: #61686E;
+    font-size: 0.95em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_listing\.scss}line{font-family:\0000320}}
+  .listing-content .views-row h2 {
+    color: #0099CC;
+    margin: 0;
+    font-size: 1.3em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_login\.scss}line{font-family:\000031}}
+#block-fboauth-login {
+  margin-top: 50px;
+  height: 290px;
+  padding-top: 220px;
+  text-align: center;
+  background: url(../images/logo-big.png) no-repeat center top;
+  margin-bottom: 50px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_login\.scss}line{font-family:\000039}}
+a.facebook-action-connect {
+  height: 39px;
+  width: 203px;
+  background: url(../images/facebook-login.png) no-repeat;
+  background-size: 203px 79px;
+  text-indent: -9999px;
+  display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_login\.scss}line{font-family:\0000317}}
+a.facebook-action-connect:hover {
+  background-position: 0 -40px; }
