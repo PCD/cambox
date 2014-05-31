@@ -28,7 +28,7 @@ function cambox_chat_data_get_comments($nid, $limit, $last_cid = null) {
         $comment->save_link = l(t('Save'), $baseurl . '/save/' . $comment->cid);
       }
     }
-    ksort($comments);
+    //ksort($comments);
   }
   return $comments;
 }
@@ -43,11 +43,12 @@ function cambox_chat_data_comment_prepare($comment) {
   $name .= ' ' . $cuser->field_last_name[LANGUAGE_NONE][0]['safe_value'];
   $name = trim($name);
   $params = array(
+    'cid' => $comment->cid, 
     'user_picture' => image_style_url('profile', $cuser->picture->uri),  
     'user_name' => $name, 
     'message' => check_markup($comment->comment_body[LANGUAGE_NONE][0]['value'], 'filtered_html', ''), 
     'time' => cambox_chat_timeago($comment->created), 
-    'class' => 'last', 
+    'class' => 'first', 
   );
   if ( $comment->status == 0 ) {
     $params['approve_link'] = l(t('Approve'), $baseurl . '/approve/' . $comment->cid);

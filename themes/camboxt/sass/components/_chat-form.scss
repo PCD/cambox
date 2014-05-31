@@ -1,0 +1,63 @@
+#comment-form{
+  width: 480px;
+  padding: 9px 12px 12px 0;
+  border: solid 1px #E1E8ED;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background: #19A8E2;
+  .form-item-message{
+    float: left;
+    width: 395px;
+    background: url(../images/chat-field.png) no-repeat 3px 0;
+    height: 77px;
+    padding: 12px 8px 12px 20px;
+    margin-bottom: 10px;
+    textarea{
+      background: none;
+      border: none;
+      outline: none;
+      height: 53px;
+      resize: none;
+    }
+  }
+  .image{
+    margin-top: 5px;
+    width: 68px;
+    height: 70px;
+    margin-left: 5px;
+    float: left;
+    border: 4px solid white;
+    border-width: 5px 4px;
+    border-radius: 8px 8px 8px 8px;
+  }
+  .form-actions{
+    clear: left;
+    float: left;
+    margin-left: 12px;
+    margin-bottom: 0;
+  }
+  .message-limit{
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .time-left{
+    float: right;
+    margin-top: 10px;
+    color: white;
+  }
+  .form-actions .form-submit{
+    border: solid 1px white;
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background: #198EBF;
+  }
+}
+#comment-form:after{
+  display: table;
+  content: "";
+  clear: both;
+}
