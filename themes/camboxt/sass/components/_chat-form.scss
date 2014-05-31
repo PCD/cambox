@@ -6,6 +6,35 @@
   border-right: none;
   border-top: none;
   background: #19A8E2;
+  
+  h3.title{
+    float: left;
+    color: white;
+    margin: 0 0 0 12px;
+  }
+  .logout{
+    background: url(../images/chat_logout_bg.png) repeat-x;
+    border-radius: 8px 8px 8px 8px;
+    height: 32px;
+    padding: 8px 12px 0;
+    width: 237px;
+    float: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+    .name{
+      color: #4252AB;
+      float: left;
+      padding-left: 24px;
+      background: url(../images/fb-icon-chat.png) no-repeat;
+      height: 18px;
+    }
+    .logout-link{
+      float: right;
+    }
+    .logout-link a{
+      color: #9A9A9A;
+    }
+  }
   .form-item-message{
     float: left;
     width: 395px;
@@ -46,6 +75,7 @@
     float: right;
     margin-top: 10px;
     color: white;
+    font-size: 14px;
   }
   .form-actions .form-submit{
     border: solid 1px white;
@@ -54,6 +84,13 @@
     color: white;
     font-weight: bold;
     background: #198EBF;
+  }
+}
+#comment-form.disabled{
+  .form-actions .form-submit{
+    color: #BBBBBB;
+    border-color: #BBBBBB;
+    cursor: default;
   }
 }
 #comment-form:after{

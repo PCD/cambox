@@ -118,3 +118,15 @@ function cambox_chat_timeago($time) {
   krsort($timeago);
   return implode(', ', $timeago);
 }
+
+/**
+ * Get last comment time from current chat and current user.
+ */
+function cambox_chat_data_get_last_comment_time($nid, $uid) {
+  $sql = sprintf("SELECT MAX(created) time FROM {comment} WHERE nid = %d AND uid = %d", $nid, $uid);
+  $results = db_query($sql);
+  if ( ($row = $results->fetchAssoc()) ) {
+    return intval($row['time']);
+  }
+  return 0;
+}
