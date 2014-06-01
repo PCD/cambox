@@ -216,6 +216,11 @@ body {
 .comments-wrapper {
   background: #ffffff; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_front-logo\.scss}line{font-family:\000031}}
+.front.logged-in .l-page {
+  background: url(../images/logo-big.png) no-repeat center 50px;
+  padding-top: 290px; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_header-candidato\.scss}line{font-family:\000032}}
 .block--ds-extras-candidato-header .image {
   width: 98px;

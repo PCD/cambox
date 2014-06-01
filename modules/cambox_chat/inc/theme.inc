@@ -41,10 +41,11 @@ function cambox_chat_theme_comments($comments, $type) {
   
   $form = '';
   $login_form = '';
+  global $user;
   if ( user_access('Post Chat') ) {
     $form = drupal_get_form('cambox_chat_form');
     $form = drupal_render($form);
-  } else {
+  } else if ( $user->uid == 0 ) {
     $login_form = fboauth_block_view(1);
     $login_form = $login_form['content'];
   }
