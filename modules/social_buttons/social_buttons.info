@@ -1,0 +1,4 @@
+name = Social Buttons
+description = "Provides Social Buttons"
+package = PCD
+core = 7.x

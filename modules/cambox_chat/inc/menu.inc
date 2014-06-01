@@ -15,7 +15,7 @@ function cambox_chat_menu() {
     'title' => 'Chat', 
     'page callback' => 'cambox_chat_menu_post_comment', 
     'page arguments' => array(1), 
-    'access arguments' => array('Access Chat'), 
+    'access arguments' => array('Post Chat'), 
     'type' => MENU_CALLBACK, 
   );
   $items['node/%node/chat/pull/%'] = array(

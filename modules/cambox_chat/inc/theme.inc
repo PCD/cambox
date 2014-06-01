@@ -39,8 +39,11 @@ function cambox_chat_theme_comments($comments, $type) {
     $i++;
   }
   
-  $form = drupal_get_form('cambox_chat_form');
-  $form = drupal_render($form);
+  $form = '';
+  if ( user_access('Post Chat') ) {
+    $form = drupal_get_form('cambox_chat_form');
+    $form = drupal_render($form);
+  }
   $output = theme('cambox_chat-comments', array(
     'type' => $type, 
     'comments' => $comments_output, 

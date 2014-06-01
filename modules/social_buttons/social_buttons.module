@@ -1,0 +1,43 @@
+<?php
+/**
+ * Implements hook_block_info.
+ */
+function social_buttons_block_info() {
+  $blocks = array();
+  $blocks['social_buttons'] = array(
+    'info' => t('Social Buttons'), 
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view.
+ */
+function social_buttons_block_view($delta = '') {
+  $block = array();
+  switch($delta) {
+    case 'social_buttons':
+      if ( arg(0) == 'node' && intval(arg(1)) > 0 && is_null(arg(2)) ) {
+        $url = url('node/' . arg(1), array('absolute'=>true));
+        $block['content'] = social_buttons_theme_buttons($url);
+      }
+      break;
+  }
+  return $block;
+}
+
+/**
+ *
+ */
+function social_buttons_theme_buttons($url) {
+  $fb = '<div class="fb-share-button" data-href="' . $url . '" data-type="button"></div>';
+  $tw = '<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\'://platform.twitter.com/widgets.js\';fjs.parentNode.insertBefore(js,fjs);}}(document, \'script\', \'twitter-wjs\');</script>';
+  $gp = '<div class="g-plusone" data-size="tall" data-annotation="none"></div>';
+  $social_buttons = "<ul>
+    <li class=\"tw first\">{$tw}</li>
+    <li class=\"gp\">{$gp}</li>
+    <li class=\"fb last\">{$fb}</li>
+  </ul>";
+  return $social_buttons;
+}

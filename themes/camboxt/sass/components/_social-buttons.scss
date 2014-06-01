@@ -1,0 +1,35 @@
+#block-social-buttons-social-buttons{
+  .contextual-links-wrapper{
+    display: none;
+  }
+  .block__content ul, 
+  .block__content ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .block__content ul{
+    
+  }
+  .block__content ul li{
+    float: right;
+    margin-left: 6px;
+  }
+  .block__content ul li.last{
+    margin-left: 0;
+  }
+  .block__content ul:after{
+    display: table;
+    content: "";
+    clear: both;
+  }
+  li.fb{
+    width: 78px;
+  }
+  li.tw{
+    width: 67px;
+  }
+  li.gp{
+    width: 50px;
+  }
+}

@@ -8,6 +8,10 @@ function cambox_chat_permission() {
       'title' => 'Access Chat', 
       'description' => 'Access Chat', 
     ), 
+    'Post Chat' => array(
+      'title' => 'Post Chat', 
+      'description' => 'Post Chat', 
+    ), 
     'Approve Chat Messages' => array(
       'title' => 'Approve Chat Messages', 
       'description' => 'Approve Chat Messages', 

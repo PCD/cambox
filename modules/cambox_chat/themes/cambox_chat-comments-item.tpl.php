@@ -5,7 +5,9 @@
   <div class="info">
     <div class="submitted">
       <span class="author"><?php print $user_name;?></span> 
+<?php if (isset($time) && !empty($time)):?>
       <span class="time"><?php print $time;?></span>
+<?php endif;?>
     </div>
     <p><?php print $message;?></p>
   </div>
