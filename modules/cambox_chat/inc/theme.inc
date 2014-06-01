@@ -26,6 +26,8 @@ function cambox_chat_theme_comments($comments, $type) {
   $output = $comments_output = '';
   $i = 1;
   $t = count($comments);
+  $approve_chat_messages = user_access('Approve Chat Messages');
+  global $user;
   foreach($comments as $comment) {
     $classes = array();
     if ( $i == 1 ) {
@@ -33,6 +35,13 @@ function cambox_chat_theme_comments($comments, $type) {
     }
     if ( $i == $t ) {
       $classes[] = 'last';
+    }
+    $comment->unpublished_text = '';
+    if ( !($approve_chat_messages && $comment->uid == $user->uid) ) {
+      if ( $comment->status == 0 ) {
+        $classes[] = 'unpublished';
+        $comment->unpublished_text = 'No Publicado';
+      }
     }
     $class = implode(' ', $classes);
     $comments_output .= cambox_chat_theme_comments_item($comment, $class);

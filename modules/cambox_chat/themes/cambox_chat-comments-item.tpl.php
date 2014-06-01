@@ -8,6 +8,9 @@
 <?php if (isset($time) && !empty($time)):?>
       <span class="time"><?php print $time;?></span>
 <?php endif;?>
+<?php if (isset($unpublished_text) && !empty($unpublished_text)):?>
+      <span class="unpublished_text"><?php print $unpublished_text;?></span>
+<?php endif;?>
     </div>
     <p><?php print $message;?></p>
   </div>

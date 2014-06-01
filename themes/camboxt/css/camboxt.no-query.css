@@ -147,54 +147,58 @@ body {
   border-right: solid 1px #C9CDCE; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000316}}
+.comments .comment.unpublished {
+  background: #EEEEEE; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000319}}
 .comments-wrapper .comments {
   clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000322}}
 .comments .comment:after {
   display: table;
   content: "";
   clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000327}}
 .comments .comment.first {
   border-top: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000330}}
 .comments .comment .image {
   float: left;
   width: 60px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000335}}
 .comments .comment .info,
 .comments .comment .actions {
   margin-left: 70px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000338}}
 .comments .comment .info p {
   margin: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000341}}
 .comments .comment .info p + p {
   margin-top: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000344}}
 .comments .comment .author {
   font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000347}}
 .comments .comment .time {
   font-size: 0.9em;
   color: gray; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000351}}
 .comments .comment .actions {
   margin: 0 0 0 80px;
   padding: 0;
   list-style: none;
   text-align: right; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000357}}
 .comments .comment .actions li {
   margin: 0;
   padding: 0;
@@ -202,12 +206,12 @@ body {
   text-align: left;
   display: inline-block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000364}}
 .comments .comment .actions li a {
   color: #c8c8c8;
   text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\0000369}}
 .comments .comment:hover .actions li a,
 .comments .comment .actions li a:hover {
   color: #8899a6; }

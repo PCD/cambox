@@ -12,10 +12,12 @@ function cambox_chat_data_get_comments($nid, $limit, $last_cid = null) {
     $where_clauses[] = sprintf(" c.cid > %d ", $last_cid);
     $where_clauses[] = sprintf(" c.uid != %d ", $user->uid);
   }
-  if ( $user->uid > 0 ) {
-    $where_clauses[] = sprintf(" IF(c.uid=%d, 1, c.status) = 1 ", $user->uid);
-  } else {
-    $where_clauses[] = " c.status = 1 ";
+  if ( !user_access('Approve Chat Messages') ) {
+    if ( $user->uid > 0 ) {
+      $where_clauses[] = sprintf(" IF(c.uid=%d, 1, c.status) = 1 ", $user->uid);
+    } else {
+      $where_clauses[] = " c.status = 1 ";
+    }
   }
   $where = '';
   if ( !empty($where_clauses) ) {
