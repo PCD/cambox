@@ -1,5 +1,68 @@
+.comments{
+  max-height: 500px;
+  overflow: scroll;
+}
+.comments .comment{
+  font-size: 14px;
+  display: block;
+  padding: 9px 24px 9px 12px;
+  border-top: solid 1px #FEFDFF;
+  margin: 0;
+  background: #DFEDEE;
+  border-bottom: #D0DCDC solid 1px;
+  border-left: solid 1px #C9CDCE;
+  border-right: solid 1px #C9CDCE;
+}
 .comments-wrapper .comments{
   clear: both;
-  border: solid 1px #E1E8ED;
+}
+.comments .comment:after{
+  display: table;
+  content: "";
+  clear: both;
+}
+.comments .comment.first{
   border-top: none;
+}
+.comments .comment .image{
+  float: left;
+  width: 60px;
+}
+.comments .comment .info,
+.comments .comment .actions{
+  margin-left: 70px;
+}
+.comments .comment .info p{
+  margin: 0;
+}
+.comments .comment .info p+p{
+  margin-top: 10px;
+}
+.comments .comment .author{
+  font-weight: bold;
+}
+.comments .comment .time{
+  font-size: 0.9em;
+  color: gray;
+}
+.comments .comment .actions{
+  margin: 0 0 0 80px;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+.comments .comment .actions li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  display: inline-block;
+}
+.comments .comment .actions li a{
+  color: #c8c8c8;
+  text-decoration: none;
+}
+.comments .comment:hover .actions li a, 
+.comments .comment .actions li a:hover{
+  color: #8899a6;
 }
