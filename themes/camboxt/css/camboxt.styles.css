@@ -109,6 +109,26 @@ body {
   content: "";
   clear: both; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-login\.scss}line{font-family:\000031}}
+#login-form {
+  background: #19A9E3;
+  padding: 10px 12px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-login\.scss}line{font-family:\000034}}
+  #login-form h2 {
+    margin: 0;
+    color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-login\.scss}line{font-family:\000038}}
+  #login-form .content {
+    background: url(../images/chat-login-bg.png) no-repeat;
+    width: 456px;
+    height: 121px;
+    padding: 5px 0;
+    text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-login\.scss}line{font-family:\0000314}}
+    #login-form .content p {
+      font-size: 18px;
+      color: #666666; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cristian100\/Sites\/gobierno\/html\/sites\/local\.cambox\.com\/themes\/camboxt\/sass\/components\/_chat-messages\.scss}line{font-family:\000031}}
 .comments {
   max-height: 500px;
