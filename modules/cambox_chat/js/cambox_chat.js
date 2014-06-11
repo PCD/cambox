@@ -8,6 +8,9 @@
         // Ajax Pull
         commentPullAjax();
         
+        // Ajax Approve
+        commentApproveAjax();
+        
         // Message Limit
         commentSetLimit();
         
@@ -169,6 +172,22 @@ function commentCounterPause() {
   if ( pause > 0 ) {
     commentCounter(pause);
   }
+}
+
+/**
+ * Aporoves Link
+ */
+function commentApproveAjax() {
+  $('.comment li.approve a').click(function(event){
+    obj = $(this);
+    url = $(this).attr('href');
+    $.post(url, function(data){
+      $(obj).parent().parent().parent().find('.submitted .unpublished_text').remove();
+      $(obj).parent().parent().parent().removeClass('unpublished');
+      $(obj).parent().remove();
+    }, 'json');
+    event.preventDefault();
+  });
 }
 
 })(jQuery);

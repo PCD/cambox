@@ -155,3 +155,13 @@ function cambox_chat_data_get_last_comment_time($nid, $uid) {
   }
   return 0;
 }
+
+/**
+ * Approves a comment.
+ */
+function cambox_chat_data_approves_comment($nid, $cid) {
+  $sql = "UPDATE {comment} SET status = 1 WHERE nid = %d AND cid = %d";
+  $sql = sprintf($sql, $nid, $cid);
+  db_query($sql);
+  return true;
+}

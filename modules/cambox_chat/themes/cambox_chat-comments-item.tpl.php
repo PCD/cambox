@@ -17,10 +17,10 @@
 <?php if (isset($approve_link) || isset($save_link)):?>
   <ul class="actions">
     <?php if (isset($approve_link)):?>
-    <li><?php print $approve_link;?></li>
+    <li class="approve"><?php print $approve_link;?></li>
     <?php endif;?>
     <?php if (isset($save_link)):?>
-    <li><?php print $save_link;?></li>
+    <li class="save"><?php print $save_link;?></li>
     <?php endif;?>
   </ul>
 <?php endif;?>

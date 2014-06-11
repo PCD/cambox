@@ -37,7 +37,7 @@ function cambox_chat_theme_comments($comments, $type) {
       $classes[] = 'last';
     }
     $comment->unpublished_text = '';
-    if ( !($approve_chat_messages && $comment->uid == $user->uid) ) {
+    if ( $approve_chat_messages ) {
       if ( $comment->status == 0 ) {
         $classes[] = 'unpublished';
         $comment->unpublished_text = 'No Publicado';

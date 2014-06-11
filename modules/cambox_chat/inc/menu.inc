@@ -18,6 +18,18 @@ function cambox_chat_menu() {
     'access arguments' => array('Post Chat'), 
     'type' => MENU_CALLBACK, 
   );
+  $items['node/%node/chat/approve/%'] = array(
+    'page callback' => 'cambox_chat_menu_approve_comment', 
+    'page arguments' => array(1, 4), 
+    'access arguments' => array('Approve Chat Messages'), 
+    'type' => MENU_CALLBACK, 
+  );
+  $items['node/%node/chat/save/%'] = array(
+    'page callback' => 'cambox_chat_menu_save_comment', 
+    'page arguments' => array(1, 4), 
+    'access arguments' => array('Save Chat Messages'), 
+    'type' => MENU_CALLBACK, 
+  );
   $items['node/%node/chat/pull/%'] = array(
     'title' => 'Chat', 
     'page callback' => 'cambox_chat_menu_pull_comment', 
@@ -109,6 +121,19 @@ function cambox_chat_menu_pull_comment($node, $last_cid) {
   // We have comments, lets style them.
   $response['comments'] = cambox_chat_theme_comments_for_ajax($comments);
   $response['count'] = count($comments);
+  print drupal_json_output($response);
+  exit;
+}
+
+/**
+ * Approves a comment.
+ */
+function cambox_chat_menu_approve_comment($node, $cid) {
+  $response = array(
+    'valid' => 1, 
+  );
+  cambox_chat_data_approves_comment($node->nid, $cid);
+  
   print drupal_json_output($response);
   exit;
 }
