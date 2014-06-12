@@ -1,4 +1,4 @@
-<div id="comment-<?php print $cid;?>" data-cid="<?php print $cid;?>" class="comment <?php print $zebra;?> <?php print $class;?>">
+<div id="comment-<?php print $cid;?>" data-cid="<?php print $cid;?>" data-timestamp="<?php print $created;?>" class="comment <?php print $zebra;?> <?php print $class;?>">
   <div class="image">
     <img src="<?php print $user_picture;?>" />
   </div>

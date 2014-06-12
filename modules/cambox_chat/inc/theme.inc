@@ -6,10 +6,18 @@ function cambox_chat_theme_comments_for_ajax($comments) {
   $comments_output = '';
   $i = 1;
   $t = count($comments);
+  $approve_chat_messages = user_access('Approve Chat Messages');
   foreach($comments as $comment) {
     $classes = array();
     if ( $i == $t ) {
       $classes[] = 'last';
+    }
+    $comment->unpublished_text = '';
+    if ( $approve_chat_messages ) {
+      if ( $comment->status == 0 ) {
+        $classes[] = 'unpublished';
+        $comment->unpublished_text = 'No Publicado';
+      }
     }
     $class = implode(' ', $classes);
     $comments_output = cambox_chat_theme_comments_item($comment, $class);
@@ -97,6 +105,7 @@ function cambox_chat_theme() {
         'user_name' => NULL, 
         'message' => NULL, 
         'time' => NULL, 
+        'created' => NULL, 
         'approve_link' => NULL, 
         'save_link' => NULL, 
         'class' => NULL, 

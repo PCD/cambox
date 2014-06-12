@@ -6,7 +6,7 @@ function cambox_chat_form($form, &$form_state) {
   $form = array();
   $form['#action'] = url('node/' . arg(1) . '/chat/comment');
   $text_limit = variable_get('cambox-message-limit', 150);
-  $time_left = variable_get('cambox-time-left', 60);
+  $time_left = variable_get('cambox-time-left', 30);
   $form['h3'] = array(
     '#type' => 'markup', 
     '#markup' => '<h3 class="title">Chat en Vivo</h3>', 
@@ -78,7 +78,7 @@ function cambox_chat_form_logged(&$form) {
     $last_comment_nid = cambox_chat_data_get_last_comment_time(arg(1), $cuser->uid);
     if ( $last_comment_nid > 0 ) {
       $time_ago = time() - $last_comment_nid;
-      $time_limit = variable_get('cambox-time-left', 60);
+      $time_limit = variable_get('cambox-time-left', 30);
       //$time_limit = 1000;
       if ( $time_ago < $time_limit ) {
         $time_left = $time_limit - $time_ago;
@@ -99,7 +99,7 @@ function cambox_chat_form_logout() {
   $name = $cuser->field_first_name[LANGUAGE_NONE][0]['safe_value'];
   $name .= ' ' . $cuser->field_last_name[LANGUAGE_NONE][0]['safe_value'];
   $name = trim($name);
-  $logout_link = '<a href="">Salir</a>';
+  $logout_link = l('Salir', 'user/logout', array('query'=>array('destination'=>'node/' . arg(1))));
   $output = "<div class=\"logout\">
     <div class=\"name\">{$name}</div>
     <div class=\"logout-link\">{$logout_link}</div>

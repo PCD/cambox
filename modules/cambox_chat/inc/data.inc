@@ -2,14 +2,14 @@
 /**
  * Retrieve the latest comments.
  */
-function cambox_chat_data_get_comments($nid, $limit, $last_cid = null) {
+function cambox_chat_data_get_comments($nid, $limit, $last_time = null) {
   global $user;
   $fields = "SELECT c.cid, c.uid, c.nid, c.created, c.status, b.comment_body_value message ";
   $tables = "FROM {comment} c 
   INNER JOIN {field_data_comment_body} b ON b.entity_id = c.cid \n";
   $where_clauses = array();
-  if ( !is_null($last_cid) ) {
-    $where_clauses[] = sprintf(" c.cid > %d ", $last_cid);
+  if ( !is_null($last_time) ) {
+    $where_clauses[] = sprintf(" c.created > %d ", $last_time);
     $where_clauses[] = sprintf(" c.uid != %d ", $user->uid);
   }
   if ( !user_access('Approve Chat Messages') ) {
@@ -67,6 +67,8 @@ function cambox_chat_data_comment_prepare($comment) {
   $name = $cuser->field_first_name[LANGUAGE_NONE][0]['safe_value'];
   $name .= ' ' . $cuser->field_last_name[LANGUAGE_NONE][0]['safe_value'];
   $name = trim($name);
+  $user_can_approve = user_access('Approve Chat Messages');
+  $user_can_save = user_access('Save Chat Messages');
   $params = array(
     'cid' => $comment->cid, 
     'user_picture' => image_style_url('profile', $cuser->picture->uri),  
@@ -76,9 +78,13 @@ function cambox_chat_data_comment_prepare($comment) {
     'class' => 'first', 
   );
   if ( $comment->status == 0 ) {
-    $params['approve_link'] = l(t('Approve'), $baseurl . '/approve/' . $comment->cid);
+    if ( $user_can_save ) {
+      $params['approve_link'] = l(t('Approve'), $baseurl . '/approve/' . $comment->cid);
+    }
   } elseif ( $comment->status == 1 ) {
-    $params['save_link'] = l(t('Save'), $baseurl . '/save/' . $comment->cid);
+    if ( $user_can_save ) {
+      $params['save_link'] = l(t('Save'), $baseurl . '/save/' . $comment->cid);
+    }
   }
   return $params;
 }
@@ -160,8 +166,8 @@ function cambox_chat_data_get_last_comment_time($nid, $uid) {
  * Approves a comment.
  */
 function cambox_chat_data_approves_comment($nid, $cid) {
-  $sql = "UPDATE {comment} SET status = 1 WHERE nid = %d AND cid = %d";
-  $sql = sprintf($sql, $nid, $cid);
+  $sql = "UPDATE {comment} SET status = 1, created = %d WHERE nid = %d AND cid = %d";
+  $sql = sprintf($sql, time(), $nid, $cid);
   db_query($sql);
   return true;
 }

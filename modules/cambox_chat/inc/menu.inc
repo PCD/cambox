@@ -86,7 +86,7 @@ function cambox_chat_menu_post_comment($node) {
 /**
  * Pull new messages.
  */
-function cambox_chat_menu_pull_comment($node, $last_cid) {
+function cambox_chat_menu_pull_comment($node, $last_time) {
   $response = array(
     'valid' => 1, 
     'comments' => '', 
@@ -98,7 +98,7 @@ function cambox_chat_menu_pull_comment($node, $last_cid) {
   $time_spent = 0;
   while(($time_spent<$time_limit)) {
     // Is there any more Comments?
-    $comments = cambox_chat_data_get_comments($node->nid, 100, $last_cid);
+    $comments = cambox_chat_data_get_comments($node->nid, 100, $last_time);
     if ( !empty($comments) ) {
       break;
     }

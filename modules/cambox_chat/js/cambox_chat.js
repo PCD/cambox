@@ -56,8 +56,8 @@ function commentPullAjax() {
     
     // Prepare Vars
     baseUrl = $('#comments-raw').attr('data-pull-url');
-    lastCid = $('#comments-raw .comments .comment:first').attr('data-cid');
-    baseUrl += lastCid;
+    lastTime = $('#comments-raw .comments .comment:first').attr('data-timestamp');
+    baseUrl += lastTime;
     
     // Do Ajax Call
     $.post(baseUrl, function(data){
