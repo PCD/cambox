@@ -58,11 +58,13 @@ function cambox_chat_theme_comments($comments, $type) {
     $login_form = fboauth_block_view(1);
     $login_form = $login_form['content'];
   }
+  $data_pull_url = base_path() . 'node/' . arg(1) . '/chat/pull/';
   $output = theme('cambox_chat-comments', array(
     'type' => $type, 
     'comments' => $comments_output, 
     'form' => $form, 
     'login_form' => $login_form, 
+    'data_pull_url' => $data_pull_url, 
   ));
   return $output;
 }

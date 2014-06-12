@@ -1,15 +1,12 @@
 (function ($) {
   Drupal.behaviors.camboxChat = {
     attach: function (context, settings) {
-      $('#comment-form', context).once('foo', function () {
+      $('#comments-raw', context).once('foo', function () {
         // Ajax Chat Form
         commentFormAjax();
         
         // Ajax Pull
         commentPullAjax();
-        
-        // Ajax Approve
-        commentApproveAjax();
         
         // Message Limit
         commentSetLimit();
@@ -22,6 +19,25 @@
       });
     }
   };
+  
+  Drupal.behaviors.camboxChatApprove = {
+    attach: function (context, settings) {
+      $(document).on('click', '#comments-raw .comment li.approve a', function (event) {
+        if ( approveActive == 0 ) {
+          approveActive = 1;
+          obj = $(this);
+          url = $(this).attr('href');
+          $.post(url, function(data){
+            $(obj).parent().parent().parent().find('.submitted .unpublished_text').remove();
+            $(obj).parent().parent().parent().removeClass('unpublished');
+            $(obj).parent().remove();
+            approveActive = 0;
+          }, 'json');
+        }
+        event.preventDefault();
+      });
+    }
+  };
 
 /**
  * Some global vars.
@@ -29,6 +45,7 @@
 var pullActive = 0;
 var pushActive = 0;
 var chatActive = 1;
+var approveActive = 0;
 
 /**
  * Ajax Pull Chat.
@@ -38,7 +55,7 @@ function commentPullAjax() {
     pullActive = 1;
     
     // Prepare Vars
-    baseUrl = $('#cambox-chat-form').attr('data-pull-url');
+    baseUrl = $('#comments-raw').attr('data-pull-url');
     lastCid = $('#comments-raw .comments .comment:first').attr('data-cid');
     baseUrl += lastCid;
     
@@ -172,22 +189,6 @@ function commentCounterPause() {
   if ( pause > 0 ) {
     commentCounter(pause);
   }
-}
-
-/**
- * Aporoves Link
- */
-function commentApproveAjax() {
-  $('.comment li.approve a').click(function(event){
-    obj = $(this);
-    url = $(this).attr('href');
-    $.post(url, function(data){
-      $(obj).parent().parent().parent().find('.submitted .unpublished_text').remove();
-      $(obj).parent().parent().parent().removeClass('unpublished');
-      $(obj).parent().remove();
-    }, 'json');
-    event.preventDefault();
-  });
 }
 
 })(jQuery);

@@ -5,7 +5,6 @@
 function cambox_chat_form($form, &$form_state) {
   $form = array();
   $form['#action'] = url('node/' . arg(1) . '/chat/comment');
-  $form['#attributes']['data-pull-url'] = base_path() . 'node/' . arg(1) . '/chat/pull/';
   $text_limit = variable_get('cambox-message-limit', 150);
   $time_left = variable_get('cambox-time-left', 60);
   $form['h3'] = array(

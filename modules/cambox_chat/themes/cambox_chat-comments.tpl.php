@@ -1,4 +1,4 @@
-<div id="comments-<?php print $type;?>" class="comments-wrapper">
+<div id="comments-<?php print $type;?>" class="comments-wrapper" data-pull-url="<?php print $data_pull_url;?>">
 <?php if (isset($form) && !empty($form) ):?>
   <div id="comment-form">
     <?php print $form;?>
