@@ -7,7 +7,9 @@ function cambox_chat_data_get_comments($nid, $limit, $last_time = null) {
   $fields = "SELECT c.cid, c.uid, c.nid, c.created, c.status, b.comment_body_value message ";
   $tables = "FROM {comment} c 
   INNER JOIN {field_data_comment_body} b ON b.entity_id = c.cid \n";
-  $where_clauses = array();
+  $where_clauses = array(
+    sprintf('c.nid = %d', $nid), 
+  );
   if ( !is_null($last_time) ) {
     $where_clauses[] = sprintf(" c.created > %d ", $last_time);
     $where_clauses[] = sprintf(" c.uid != %d ", $user->uid);
