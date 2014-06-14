@@ -76,6 +76,7 @@ function cambox_chat_data_comment_prepare($comment) {
     'user_picture' => image_style_url('profile', $cuser->picture->uri),  
     'user_name' => $name, 
     'message' => check_markup($comment->comment_body[LANGUAGE_NONE][0]['value'], 'filtered_html', ''), 
+    'created' => $comment->created, 
     //'time' => cambox_chat_timeago($comment->created), 
     'class' => 'first', 
   );
