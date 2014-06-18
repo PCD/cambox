@@ -174,3 +174,10 @@ function cambox_chat_data_approves_comment($nid, $cid) {
   db_query($sql);
   return true;
 }
+
+/**
+ *
+ */
+function cambox_get_time_limit() {
+  return variable_get('cambox-time-left', 30);
+}

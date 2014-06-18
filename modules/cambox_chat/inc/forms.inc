@@ -6,7 +6,7 @@ function cambox_chat_form($form, &$form_state) {
   $form = array();
   $form['#action'] = url('node/' . arg(1) . '/chat/comment');
   $text_limit = variable_get('cambox-message-limit', 150);
-  $time_left = variable_get('cambox-time-left', 1);
+  $time_left = cambox_get_time_limit();
   $form['h3'] = array(
     '#type' => 'markup', 
     '#markup' => '<h3 class="title">Chat en Vivo</h3>', 
@@ -78,7 +78,7 @@ function cambox_chat_form_logged(&$form) {
     $last_comment_nid = cambox_chat_data_get_last_comment_time(arg(1), $cuser->uid);
     if ( $last_comment_nid > 0 ) {
       $time_ago = time() - $last_comment_nid;
-      $time_limit = variable_get('cambox-time-left', 1);
+      $time_limit = cambox_get_time_limit();
       //$time_limit = 1000;
       if ( $time_ago < $time_limit ) {
         $time_left = $time_limit - $time_ago;

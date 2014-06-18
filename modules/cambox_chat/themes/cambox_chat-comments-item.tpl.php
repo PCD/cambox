@@ -20,7 +20,7 @@
     <li class="approve"><?php print $approve_link;?></li>
     <?php endif;?>
     <?php if (isset($save_link)):?>
-    <li class="save"><?php print $save_link;?></li>
+    <!-- <li class="save"><?php print $save_link;?></li> -->
     <?php endif;?>
   </ul>
 <?php endif;?>
